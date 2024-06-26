@@ -1,0 +1,365 @@
+.App {
+  color: white;
+  width: 100%;
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+li {
+  list-style: none;
+  font-size: medium;
+}
+.active {
+  background-color: rgba(255, 255, 255, 0.085);
+  scale: 110%;
+  transition: transform 0.5s ease-in-out; /* For smooth transition */
+}
+
+.fade {
+  opacity: 0; /* Start med skjult kort */
+  animation: fadeIn 1s ease-in forwards;
+}
+
+li:hover {
+  cursor: pointer;
+  animation: scale-up 0.5s ease forwards;
+}
+
+p {
+  font-size: medium;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+
+h1 {
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: x-large;
+  font-weight: 300;
+}
+
+hr {
+  background-color: #ce921e;
+  height: 1px;
+  width: 100%;
+  border: none;
+}
+
+.bold {
+  font-weight: 400;
+  padding-left: 4px;
+}
+
+.App-header {
+  height: 200px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  font-size: calc(10px + 2vmin);
+  background-image: linear-gradient(
+      rgba(20, 29, 40, 0.9),
+      rgba(22, 31, 40, 0.9)
+    ),
+    url("/Users/96solreb/Work/Repos/euromatches/euromatches/public/fotball.jpg");
+  background-position: bottom;
+  background-size: cover;
+  border-bottom: #1a252e 1px solid;
+  box-shadow: 5px 5px 5px 0px rgba(22, 31, 40, 0.9);
+filter: drop-shadow(2px 2px 2px rgba(22, 31, 40, 0.9));
+
+}
+
+.logo {
+  position: absolute;
+  left: 45px;
+  top: 45px;
+  width: 60px;
+}
+
+.header-layout {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.header-nav ul {
+  font-size: small;
+  display: flex;
+  height: fit-content;
+  flex-direction: row;
+  gap: 20px;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  width: 550px;
+  overflow-y: scroll;
+  scrollbar-width: 5px;
+  scroll-behavior: smooth;
+  margin-right: 4rem;
+  padding: 12px;
+  scroll-padding-bottom: 3rem;
+}
+
+.header-nav ul li {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  border: 1px white solid;
+  border-radius: 4px;
+  gap: 2px;
+}
+
+
+
+
+.header-nav ul li p {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  font-size: small;
+}
+
+.date-picker {
+  margin: auto;
+  width: fit-content;
+}
+
+.circle {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+}
+
+.Finished {
+  background-color: #6b5ea3;
+  background: linear-gradient(#8374c6, #4d4863);
+}
+
+.Live {
+  background-color: green;
+}
+
+.Scheduled {
+  background-color: yellow;
+  background: linear-gradient(#fcf76e, #ffea01);
+}
+
+li.false.today {
+background-color: #161f28d8;
+
+}
+
+
+/*Display*/
+
+.match-card {
+  border: white solid 1px;
+  width: 400px;
+  border-radius: 6px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.match-section {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem;
+}
+
+@media only screen and (max-device-width: 1000px) {
+  .match-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.top-match-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.top-match-card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.top-match-card div p {
+  letter-spacing: 2px;
+  font-size: 22px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.bottom-match-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottom-match-card div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.bottom-match-card p {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 8px;
+}
+
+.bottom-match-card div.flex-col {
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 9px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .App-header {
+    height: 250px;
+  }
+  .header-layout {
+    width: 100%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .header-nav ul {
+    margin: 0;
+  }
+
+  .match-card {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .match-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 6rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .logo {
+    width: 40px;
+    height: 40px;
+    top: 30px;
+    left: 30px;
+  }
+
+  .App-header {
+    height: 250px;
+
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .header-layout {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .header-nav ul {
+    flex-wrap: nowrap;
+    max-width: 100%;
+    scrollbar-width: 5px;
+    scroll-behavior: smooth;
+    overflow: scroll;
+  }
+
+  .header-nav {
+    width: 100%;
+  }
+
+  .header-nav ul li {
+    padding: 6px;
+    font-size: x-small;
+  }
+
+  .match-card {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 22px;
+  }
+
+  .match-section {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+
+.stadium-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 150px;
+}
+
+}

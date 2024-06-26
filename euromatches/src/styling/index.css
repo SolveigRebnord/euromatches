@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  width: 100%;
+  font-style: normal;
+  min-height: 100%;
+  background-color: #161f28;
+  background: linear-gradient(to top right, #161f28, #1a252e);
+}
+
+main {
+  width: 75%;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+footer {
+  height: 200px;
+}
+
+@media only screen and (max-device-width: 1000px) {
+  main {
+    width: 80%;
+    margin: auto;
+    margin-top: 4rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  main {
+    margin: auto;
+    width: 85%;
+    margin-top: 4rem;
+  }
+}
