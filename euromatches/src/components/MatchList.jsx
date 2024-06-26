@@ -1,19 +1,38 @@
 import { findGroup, matchStatus } from "../utils/utils";
 import "../styling/matchList.css";
 
+/**
+ * Returns jsx for all matches to be shown
+ * @param {Array} matches - Array of all matches for the selected date
+ * @param {Array} groupIds - Array of all play group IDs
+ * @returns {HTMLElement} Returns JSX displaying every match
+ */
 const MatchList = ({ matches, groupIds }) => {
   return (
     <section className="match-section">
       {matches.map((match) => (
-        <div key={match.id} className={`${match.matchStatusId !== 1 ? 'not-played': ''} match-card fade`}>
+        <div
+          key={match.id}
+          className={`${
+            match.matchStatusId !== 1 ? "not-played" : ""
+          } match-card fade`}
+        >
           <div className="top-match-card">
             <div>
               <p>
-                <img height={18} src={`${match.homeTeam.logo.url}`} alt={`Flag of ${match.homeTeam.name}`}></img>
+                <img
+                  height={18}
+                  src={`${match.homeTeam.logo.url}`}
+                  alt={`Flag of ${match.homeTeam.name}`}
+                ></img>
                 {match.homeTeam.name}
               </p>
               <p>
-                <img height={18} src={`${match.awayTeam.logo.url}`} alt={`Flag of ${match.awayTeam.name}`}></img>
+                <img
+                  height={18}
+                  src={`${match.awayTeam.logo.url}`}
+                  alt={`Flag of ${match.awayTeam.name}`}
+                ></img>
                 {match.awayTeam.name}
               </p>
             </div>
@@ -39,7 +58,11 @@ const MatchList = ({ matches, groupIds }) => {
           <div className="bottom-match-card">
             <div className="flex-col">
               <p className="stadium-name">
-                <img src="./MapPin.svg" height={18} alt="Placement Pin Icon"></img>
+                <img
+                  src="./MapPin.svg"
+                  height={18}
+                  alt="Placement Pin Icon"
+                ></img>
                 {match.stadium.name}
               </p>
               <div>

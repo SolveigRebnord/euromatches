@@ -7,13 +7,11 @@ body {
   min-height: 100%;
   background-color: #161f28;
   background: linear-gradient(to top right, #161f28, #1a252e);
-
 }
 
 main {
   width: 70%;
-  margin: 3rem auto ;
-
+  margin: 3rem auto;
 }
 
 footer {

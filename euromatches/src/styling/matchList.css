@@ -1,86 +1,80 @@
-
 .circle {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border-radius: 100%;
-  }
-  
-  .Finished {
-    background-color: #37414cd8;
-    background: linear-gradient(#606a74d8, #606a74d8);
-  }
-  
-  .Live {
-    background-color: green;
-  }
-  
-  .Scheduled {
-    background-color: #ce921e;
-    background: linear-gradient(#ce921e, #db960bea);
-  }
-  
-  li.false.today {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+}
+
+.Finished {
+  background-color: #37414cd8;
+  background: linear-gradient(#606a74d8, #606a74d8);
+}
+
+.Live {
+  background-color: green;
+}
+
+.Scheduled {
+  background-color: #ce921e;
+  background: linear-gradient(#ce921e, #db960bea);
+}
+
+li.false.today {
   background-color: #161f28d8;
-  }
-  
+}
+
+.match-section {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem;
+}
+
+.match-card {
+  border: white solid 1px;
+  border-radius: 6px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.not-played {
+  border: solid #ce921e 1px;
+}
+
+@media only screen and (max-width: 1100px) {
   .match-section {
-    margin-top: 3rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 6rem;
   }
-  
+
   .match-card {
-    border: white solid 1px;
-    border-radius: 6px;
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    box-sizing: border-box;
+    width: 100%;
   }
-  
-  .not-played {
-    border: solid #ce921e 1px;
-  }
-  
-
-
-  @media only screen and (max-width: 1100px) {
-
-    .match-section {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 6rem;
-      }
-
-    .match-card {
-        box-sizing: border-box;
-        width: 100%;
-      }
-  }
-  
+}
 
 @media only screen and (max-width: 700px) {
+  .match-card {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 22px;
+  }
 
-    .match-card {
-        box-sizing: border-box;
-        width: 100%;
-        padding: 22px;
-      }
-    
-      .match-section {
-        width: 100%;
-        margin-top: 3rem;
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-      }
+  .match-section {
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
 
-      .stadium-name {
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        max-width: 150px;
-      }
+  .stadium-name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 150px;
+  }
 }

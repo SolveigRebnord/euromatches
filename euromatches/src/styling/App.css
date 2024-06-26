@@ -8,11 +8,11 @@ p {
 }
 
 h1,
-ul , p{
+ul,
+p {
   padding: 0;
   margin: 0;
 }
-
 
 h1 {
   font-size: 38px;
@@ -58,8 +58,6 @@ li:hover {
   padding-left: 4px;
 }
 
-
-
 @keyframes scale-up {
   0% {
     transform: scale(1);
@@ -81,7 +79,6 @@ li:hover {
   }
 }
 
-
 header {
   height: 200px;
   padding: 3rem;
@@ -89,10 +86,7 @@ header {
   flex-direction: column;
   justify-content: end;
   font-size: calc(10px + 2vmin);
-  background-image: linear-gradient(
-      rgba(6, 9, 13, 0.85),
-      rgba(13, 22, 31, 0.9)
-    ),
+  background-image: linear-gradient(rgba(6, 9, 13, 0.85), rgba(13, 22, 31, 0.9)),
     url("/Users/96solreb/Work/Repos/euromatches/euromatches/public/fotball.jpg");
   background-position: bottom;
   background-size: cover;
@@ -141,7 +135,6 @@ header {
   gap: 2px;
 }
 
-
 .header-nav ul li p {
   display: flex;
   flex-direction: row;
@@ -174,7 +167,8 @@ header {
   gap: 6px;
 }
 
-.bottom-match-card, .bottom-match-card div  {
+.bottom-match-card,
+.bottom-match-card div {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -207,13 +201,7 @@ footer {
   padding-bottom: 12px;
 }
 
-
-
-
-
-
 @media only screen and (max-width: 1100px) {
-
   header {
     height: 280px;
   }
@@ -230,11 +218,9 @@ footer {
   .header-nav ul {
     margin: 0;
   }
-
 }
 
 @media only screen and (max-width: 700px) {
-
   .logo {
     width: 40px;
     height: 40px;
@@ -248,7 +234,6 @@ footer {
     width: 100%;
     padding: 1rem 2rem;
     display: flex;
-  
   }
 
   .header-layout {
@@ -258,7 +243,6 @@ footer {
     align-items: center;
     gap: 1.5rem;
   }
-  
 
   .header-nav {
     overflow-x: scroll;
@@ -269,5 +253,4 @@ footer {
     padding: 1.5rem 1rem;
     font-size: x-small;
   }
-
 }

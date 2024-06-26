@@ -7,19 +7,27 @@ import MatchList from "./components/MatchList.jsx";
 
 function App() {
   const [dato, setDate] = useState(new Date());
-
   const groupIds = [691296, 691297, 691300, 691298, 691299, 691301];
   const urls = groupIds.map(
     (id) => `https://api.nifs.no/stages/${id}/matches/`,
   );
 
+  /**
+   * @param {Array} urls -  Array of all fetching URLs
+   * @param {Date} dato - Selected date
+   * Returns matches for the selected date, loading status and array of all matches in total.
+   */
   const { matches, loading, allMatches } = FetchMatches(urls, dato);
 
   return (
     <div className="App">
       <header>
         <a href="/">
-          <img src="./euro-logo-2.png" className="logo" alt="Euro Games 2024 Logo" />
+          <img
+            src="./euro-logo-2.png"
+            className="logo"
+            alt="Euro Games 2024 Logo"
+          />
         </a>
         <DateHandler allMatches={allMatches} setDate={setDate} dato={dato} />
       </header>
