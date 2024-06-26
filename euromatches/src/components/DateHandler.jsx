@@ -14,14 +14,13 @@ export default function DateHandler({ allMatches, setDate, dato }) {
   }, [allMatches]);
 
   filteredDates.map((match) =>
-    !allDates.includes(match.timestamp.slice(0, 10))
-      ? allDates.push(match.timestamp.slice(0, 10))
-      : null,
+    !allDates.includes(match.timestamp.slice(0, 10)) ? allDates.push(match.timestamp.slice(0, 10))
+      : null
   );
 
 
 
-  let index = 0
+  let index = 0;
 
   return (
     <div>

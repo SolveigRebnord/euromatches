@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
         <a href="/">
           <img src="./euro-logo-2.png" className="logo" alt="Euro Games 2024 Logo" />
         </a>

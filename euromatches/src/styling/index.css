@@ -7,22 +7,22 @@ body {
   min-height: 100%;
   background-color: #161f28;
   background: linear-gradient(to top right, #161f28, #1a252e);
+
 }
 
 main {
-  width: 75%;
-  margin: auto;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  width: 70%;
+  margin: 3rem auto ;
+
 }
 
 footer {
   height: 200px;
 }
 
-@media only screen and (max-device-width: 1000px) {
+@media only screen and (max-width: 1100px) {
   main {
-    width: 80%;
+    width: 70%;
     margin: auto;
     margin-top: 4rem;
   }

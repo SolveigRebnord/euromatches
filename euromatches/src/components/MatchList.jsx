@@ -1,10 +1,11 @@
 import { findGroup, matchStatus } from "../utils/utils";
+import "../styling/matchList.css";
 
 const MatchList = ({ matches, groupIds }) => {
   return (
     <section className="match-section">
       {matches.map((match) => (
-        <div key={match.id} className="match-card fade">
+        <div key={match.id} className={`${match.matchStatusId !== 1 ? 'not-played': ''} match-card fade`}>
           <div className="top-match-card">
             <div>
               <p>

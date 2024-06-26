@@ -13,7 +13,7 @@ export const FetchMatches = (urls, dato) => {
     const results = await Promise.all(fetchPromises);
     const data = results.flat();
     return data;
-  });
+  }, [urls]);
 
   useEffect(() => {
     fetchAllData().then((combinedResults) => {
@@ -21,7 +21,7 @@ export const FetchMatches = (urls, dato) => {
       setAllMatches(combinedResults);
       setLoading(false);
     });
-  }, []);
+  }, [dato]);
 
   useEffect(() => {
     fetchAllData().then((combinedResults) => {
@@ -30,7 +30,7 @@ export const FetchMatches = (urls, dato) => {
       );
       setMatches(filteredMatches);
     });
-  }, [urls]);
+  });
 
   return { matches, loading, allMatches };
 };
