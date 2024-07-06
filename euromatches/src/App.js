@@ -5,12 +5,16 @@ import DateHandler from "./components/DateHandler.jsx";
 import FetchMatches from "./hooks/FetchMatches.js";
 import MatchList from "./components/MatchList.jsx";
 
+
 function App() {
   const [dato, setDate] = useState(new Date());
   const groupIds = [691296, 691297, 691300, 691298, 691299, 691301];
+  const start = process.env.REACT_APP_API_URL_START;
+
   const urls = groupIds.map(
-    (id) => `https://api.nifs.no/stages/${id}/matches/`,
+    (id) => `${start}${id}/matches/`,
   );
+
 
   /**
    * @param {Array} urls -  Array of all fetching URLs
